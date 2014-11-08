@@ -32,6 +32,9 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+        package { 'cosway':
+          ensure => 'installed'
+        }
 
 }
 
