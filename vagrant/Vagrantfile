@@ -34,7 +34,7 @@ require 'yaml'
 default_boxurlprefix = 'https://download.gluster.org/pub/gluster/purpleidea/vagrant'
 
 # XXX: eliminate network2 if possible...
-network2 = IPAddr.new '192.168.145.0/24'
+network2 = IPAddr.new '192.168.121.0/24'
 range2 = network2.to_range.to_a
 cidr2 = (32-(Math.log(range2.length)/Math.log(2))).to_i
 offset2 = 2
@@ -69,7 +69,7 @@ vms = [
 
 # mutable by ARGV and settings file
 domain = 'example.com'		# demain domain to use (yes this *can* work)
-network = '192.168.123.0/24'	# default network to use
+network = '192.168.121.0/24'	# default network to use
 image = 'centos-7.0'		# default image name
 boxurlprefix = ''		# default url prefix (useful for private boxes)
 sync = 'rsync'			# default sync type
@@ -500,7 +500,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 			:ip => range2[offset2+i].to_s,
 			:libvirt__netmask => netmask2,
 			#:libvirt__dhcp_enabled => false,	# XXX: not allowed here
-			:libvirt__network_name => 'default'
+			:libvirt__network_name => 'vagrant-libvirt'
 
 			# this is the real network that we'll use...
 			vm.vm.network :private_network,
