@@ -39,6 +39,9 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+	$dustin = "dustin"
+        $hi = "$dustin, hi"
+        notify {$hi: }
 
 }
 
