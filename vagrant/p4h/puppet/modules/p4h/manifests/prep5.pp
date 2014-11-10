@@ -42,6 +42,8 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+	include p4h::foo2
+	include p4h::foo2
 
 }
 
