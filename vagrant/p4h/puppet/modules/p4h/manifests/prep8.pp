@@ -46,6 +46,13 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+	exec {'something good': 
+          command => '/usr/bin/touch /prep8file; echo $SHELL > /shell',
+          onlyif => 'stat /var/log',
+          unless => 'test -f /prep8file',
+          creates => '/prep8file',
+          logouput => true
+        }
 
 }
 
