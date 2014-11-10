@@ -56,6 +56,7 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+	class { '::foo': bar => true }
 
 }
 
