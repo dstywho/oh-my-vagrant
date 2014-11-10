@@ -39,6 +39,23 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+	$day_of_week_templ = "<%= Time.now.gmtime.wday %>"
+        $hostname_time_templ = "<%= day_of_week %> <%= fqdn %>"
+
+        $one = '1'
+        $two = '2'
+        $three = "<%= ${one} + ${two} %>"
+
+        file { "/home/vagrant/three":
+          ensure => present,
+          content => inline_template($three)
+        }
+
+        file { "/vagrant/p4h/three.erb":
+          ensure => present,
+          content => $three,
+        }
+
 
 }
 
