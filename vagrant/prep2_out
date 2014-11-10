@@ -1,0 +1,400 @@
+Bringing machine 'prep2' up with 'libvirt' provider...
+==> prep2: Creating image (snapshot of base box volume).
+==> prep2: Creating domain with the following settings...
+==> prep2:  -- Name:              p4h_prep2
+==> prep2:  -- Domain type:       kvm
+==> prep2:  -- Cpus:              1
+==> prep2:  -- Memory:            512M
+==> prep2:  -- Base box:          centos-7.0
+==> prep2:  -- Storage pool:      default
+==> prep2:  -- Image:             /var/lib/libvirt/images/p4h_prep2.img
+==> prep2:  -- Volume Cache:      default
+==> prep2:  -- Kernel:            
+==> prep2:  -- Initrd:            
+==> prep2:  -- Graphics Type:     vnc
+==> prep2:  -- Graphics Port:     5900
+==> prep2:  -- Graphics IP:       127.0.0.1
+==> prep2:  -- Graphics Password: Not defined
+==> prep2:  -- Video Type:        cirrus
+==> prep2:  -- Video VRAM:        9216
+==> prep2:  -- Command line : 
+==> prep2: Starting domain.
+==> prep2: Waiting for domain to get an IP address...
+==> prep2: Waiting for SSH to become available...
+==> prep2: Starting domain.
+==> prep2: Waiting for domain to get an IP address...
+==> prep2: Waiting for SSH to become available...
+==> prep2: Creating shared folders metadata...
+==> prep2: Setting hostname...
+==> prep2: Rsyncing folder: /home/dustin/work/oh-my-vagrant/vagrant/ => /vagrant
+==> prep2: Configuring and enabling network interfaces...
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[localhost.localdomain]/ensure: created[0m
+==> prep2: host { 'localhost.localdomain':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['localhost'],
+==> prep2:   ip           => '127.0.0.1',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: host { 'prep2':
+==> prep2:   ensure => 'absent',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[p4h.example.com]/ensure: created[0m
+==> prep2: host { 'p4h.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['p4h'],
+==> prep2:   ip           => '192.168.124.3',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[puppet.example.com]/ensure: created[0m
+==> prep2: host { 'puppet.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['puppet'],
+==> prep2:   ip           => '192.168.124.100',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[prep1.example.com]/ensure: created[0m
+==> prep2: host { 'prep1.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['prep1'],
+==> prep2:   ip           => '192.168.124.101',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[prep2.example.com]/ensure: created[0m
+==> prep2: host { 'prep2.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['prep2'],
+==> prep2:   ip           => '192.168.124.102',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[prep3.example.com]/ensure: created[0m
+==> prep2: host { 'prep3.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['prep3'],
+==> prep2:   ip           => '192.168.124.103',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[prep4.example.com]/ensure: created[0m
+==> prep2: host { 'prep4.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['prep4'],
+==> prep2:   ip           => '192.168.124.104',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[prep5.example.com]/ensure: created[0m
+==> prep2: host { 'prep5.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['prep5'],
+==> prep2:   ip           => '192.168.124.105',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[prep6.example.com]/ensure: created[0m
+==> prep2: host { 'prep6.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['prep6'],
+==> prep2:   ip           => '192.168.124.106',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[prep7.example.com]/ensure: created[0m
+==> prep2: host { 'prep7.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['prep7'],
+==> prep2:   ip           => '192.168.124.107',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: shell...
+    prep2: Running: inline script
+==> prep2: [mNotice: /Host[prep8.example.com]/ensure: created[0m
+==> prep2: host { 'prep8.example.com':
+==> prep2:   ensure       => 'present',
+==> prep2:   host_aliases => ['prep8'],
+==> prep2:   ip           => '192.168.124.108',
+==> prep2:   target       => '/etc/hosts',
+==> prep2: }
+==> prep2: Running provisioner: puppet_server...
+==> prep2: Running Puppet agent...
+==> prep2: Info: Creating a new SSL key for prep2.example.com
+==> prep2: Info: Caching certificate for ca
+==> prep2: Info: csr_attributes file loading from /etc/puppet/csr_attributes.yaml
+==> prep2: Info: Creating a new SSL certificate request for prep2.example.com
+==> prep2: Info: Certificate Request fingerprint (SHA256): 42:69:AB:3E:D2:BE:68:0E:96:50:1A:9B:43:9B:AD:D2:C4:9D:E7:8A:CB:2D:3F:46:19:48:15:DE:E0:54:AD:AC
+==> prep2: Info: Caching certificate for prep2.example.com
+==> prep2: Info: Caching certificate_revocation_list for ca
+==> prep2: Info: Caching certificate for ca
+==> prep2: Info: Retrieving pluginfacts
+==> prep2: Notice: /File[/var/lib/puppet/facts.d]/mode: mode changed '0755' to '2755'
+==> prep2: Info: Retrieving plugin
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/provider]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/indirector]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/provider/file_line]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/indirector/data_binding]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/ensure_packages.rb]/ensure: defined content as '{md5}fbed5c0c9bf82b7746e01f15f89d184f'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_hash.rb]/ensure: defined content as '{md5}e9cfaca68751524efe16ecf2f958a9a0'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/count.rb]/ensure: defined content as '{md5}9eb74eccd93e2b3c87fd5ea14e329eba'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_bool.rb]/ensure: defined content as '{md5}a712634a000024398b3c6cd4ecc46463'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/get_module_path.rb]/ensure: defined content as '{md5}d4bf50da25c0b98d26b75354fa1bcc45'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_ip_address.rb]/ensure: defined content as '{md5}a714a736c1560e8739aaacd9030cca00'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_numeric.rb]/ensure: defined content as '{md5}93ddc9d4c0834a5e5e0562d7b3cdce91'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/bool2str.rb]/ensure: defined content as '{md5}34497af8db94754542b9d4cfacc8a27f'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/delete.rb]/ensure: defined content as '{md5}96e569dac96b8c9387e9303445d73048'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_domain_name.rb]/ensure: defined content as '{md5}cf72726c0fec831eb703ec9deea739eb'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/has_ip_address.rb]/ensure: defined content as '{md5}ee207f47906455a5aa49c4fb219dd325'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_absolute_path.rb]/ensure: defined content as '{md5}385137ac24a2dec6cecc4e6ea75be442'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/has_key.rb]/ensure: defined content as '{md5}7cd9728c38f0b0065f832dabd62b0e7e'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/flatten.rb]/ensure: defined content as '{md5}25777b76f9719162a8bab640e5595b7a'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/private.rb]/ensure: defined content as '{md5}065102bb39f665d65420c97dda740a40'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/max.rb]/ensure: defined content as '{md5}f652fd0b46ef7d2fbdb42b141f8fdd1d'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_augeas.rb]/ensure: defined content as '{md5}b57e68fca390759782885474dc3ab2d0'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/has_ip_network.rb]/ensure: defined content as '{md5}b4d726c8b2a0afac81ced8a3a28aa731'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_mac_address.rb]/ensure: defined content as '{md5}288bd4b38d4df42a83681f13e7eaaee0'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/getparam.rb]/ensure: defined content as '{md5}4dd7a0e35f4a3780dcfc9b19b4e0006e'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_array.rb]/ensure: defined content as '{md5}72b29289b8af1cfc3662ef9be78911b8'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/loadyaml.rb]/ensure: defined content as '{md5}2b912f257aa078e376d3b3f6a86c2a00'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/empty.rb]/ensure: defined content as '{md5}0b6ca9d0550a39c1ca50fc3d1ecbc98c'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/defined_with_params.rb]/ensure: defined content as '{md5}ffab4433d03f32b551f2ea024a2948fc'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/bool2num.rb]/ensure: defined content as '{md5}f953f5fc094c2ae3908a72d8840ba291'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/union.rb]/ensure: defined content as '{md5}137998fe47decf25aede20f0c0155a4c'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/hash.rb]/ensure: defined content as '{md5}9d072527dfc7354b69292e9302906530'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/suffix.rb]/ensure: defined content as '{md5}109279db4180441e75545dbd5f273298'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/floor.rb]/ensure: defined content as '{md5}42cad4c689231a51526c55a6f0985d1f'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/intersection.rb]/ensure: defined content as '{md5}924ac4aceec7b896952166a7ec08fdb1'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/prefix.rb]/ensure: defined content as '{md5}aebbea0290be82a4ae89ddfffbee1125'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_integer.rb]/ensure: defined content as '{md5}c665be82686aa4729959bb42c66a7510'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/swapcase.rb]/ensure: defined content as '{md5}b17a9f3cb0271451d309e4b4f52dd651'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/to_bytes.rb]/ensure: defined content as '{md5}83f23c33adbfa42b2a9d9fc2db3daeb4'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/has_interface_with.rb]/ensure: defined content as '{md5}25176aa28fb3828b040a2fd42761488a'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/deep_merge.rb]/ensure: defined content as '{md5}d83696855578fb81b64b9e92b9c7cc7c'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/lstrip.rb]/ensure: defined content as '{md5}20a9b1fa077c16f34e0ef5448b895698'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_array.rb]/ensure: defined content as '{md5}875ca4356cb0d7a10606fb146b4a3d11'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/min.rb]/ensure: defined content as '{md5}0d2a1b7e735ab251c5469e735fa3f4c6'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/sort.rb]/ensure: defined content as '{md5}504b033b438461ca4f9764feeb017833'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/merge.rb]/ensure: defined content as '{md5}f3dcc5c83440cdda2036cce69b61a14b'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/member.rb]/ensure: defined content as '{md5}541e67d06bc4155e79b00843a125e9bc'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/base64.rb]/ensure: defined content as '{md5}ae25adf92295df67ebd9edfabc9ecdd6'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/capitalize.rb]/ensure: defined content as '{md5}da131748a9d32da9eb0b6438e39377eb'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/values.rb]/ensure: defined content as '{md5}066a6e4170e5034edb9a80463dff2bb5'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/chomp.rb]/ensure: defined content as '{md5}2b7dc42f9967edd34cfa0ba9a97229ca'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/unique.rb]/ensure: defined content as '{md5}c1bb4a8aeebd09ba3e4c8bc3702cfd60'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/shuffle.rb]/ensure: defined content as '{md5}d50f72b0aeb921e64d2482f62488e2f3'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/num2bool.rb]/ensure: defined content as '{md5}605c12fa518c87ed2c66ae153e0686ce'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/join_keys_to_values.rb]/ensure: defined content as '{md5}f29da49531228f6ca5b3aa0df00a14c2'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/concat.rb]/ensure: defined content as '{md5}5c0cfccb20d5553e5a7d14ba1aa70fc5'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/any2array.rb]/ensure: defined content as '{md5}a81e71d6b67a551d38770ba9a1948a75'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/camelcase.rb]/ensure: defined content as '{md5}71c67b71eac4b7f46a0dd22cb915d2e6'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/pick.rb]/ensure: defined content as '{md5}bf01f13bbfe2318e7f6a302ac7c4433f'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/rstrip.rb]/ensure: defined content as '{md5}b4e4ada41f7c1d2fcad073ce6344980f'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/str2bool.rb]/ensure: defined content as '{md5}6320f1a50fd28ec027981cd1fb8ffdd0'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/abs.rb]/ensure: defined content as '{md5}32161bd0435fdfc2aec2fc559d2b454b'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/dirname.rb]/ensure: defined content as '{md5}bef7214eb89db3eb8f7ee5fc9dca0233'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/parseyaml.rb]/ensure: defined content as '{md5}00f10ec1e2b050e23d80c256061ebdd7'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/grep.rb]/ensure: defined content as '{md5}5682995af458b05f3b53dd794c4bf896'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/difference.rb]/ensure: defined content as '{md5}e31b95fbaf974cf853a510177368bfb9'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/squeeze.rb]/ensure: defined content as '{md5}541f85b4203b55c9931d3d6ecd5c75f8'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/downcase.rb]/ensure: defined content as '{md5}73121616d73339cf8dd10e0de61a6c50'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_string.rb]/ensure: defined content as '{md5}2bd9a652bbb2668323eee6c57729ff64'
+==> prep2: Notice: /File[/var/lib/puppet/lib/hiera]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/delete_at.rb]/ensure: defined content as '{md5}6bc24b79390d463d8be95396c963381a'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/size.rb]/ensure: defined content as '{md5}8972d48c0f9e487d659bd7326b40b642'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/indirector/data_binding/hiera.rb]/ensure: defined content as '{md5}9a67f431134c49f86fa686b116718806'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_hash.rb]/ensure: defined content as '{md5}8c7d9a05084dab0389d1b779c8a05b1a'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/keys.rb]/ensure: defined content as '{md5}eb6ac815ea14fbf423580ed903ef7bad'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/uriescape.rb]/ensure: defined content as '{md5}4638c351a373450495d6ce38e708ec67'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_ipv4_address.rb]/ensure: defined content as '{md5}a8fb6f0ca36aa460d462c07c2af5d5a2'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_ipv6_address.rb]/ensure: defined content as '{md5}4699238e4cad60e7e1428905523eaeb7'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/provider/file_line/ruby.rb]/ensure: defined content as '{md5}bed19aaf4d9d06b646c554e1cdf37d2d'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/type]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/type/anchor.rb]/ensure: defined content as '{md5}bbd36bb49c3b554f8602d8d3df366c0c'
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter/puppet_vardirtmp.rb]/ensure: defined content as '{md5}881f44ee077f26900f782fe0cd78d81d'
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter/util]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter/util/puppet_settings.rb]/ensure: defined content as '{md5}9f1d2593d0ae56bfca89d4b9266aeee1'
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter/facter_dot_d.rb]/ensure: defined content as '{md5}1f1fcf1bde3443e42a445d3573602304'
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter/puppet_bug.rb]/ensure: defined content as '{md5}472922f935afa73beba50b9e6559e8ee'
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter/root_home.rb]/ensure: defined content as '{md5}d9c8276acdceb7340d95f60c36dcdcc5'
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter/puppet_vardir.rb]/ensure: defined content as '{md5}c7ddc97e8a84ded3dd93baa5b9b3283d'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/delete_values.rb]/ensure: defined content as '{md5}39b147f7d369bb5f809044b6341954a2'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/reject.rb]/ensure: defined content as '{md5}689f6a7c961a55fe9dcd240921f4c7f9'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/range.rb]/ensure: defined content as '{md5}17a05dbae8f562f882450f9e648d4e2d'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_slength.rb]/ensure: defined content as '{md5}7e67c213509b9383707819cc612b2a29'
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter/pe_version.rb]/ensure: defined content as '{md5}4a9353952963b011759f3e6652a10da5'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/pick_default.rb]/ensure: defined content as '{md5}ad3ea60262de408767786d37a54d45dc'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/join.rb]/ensure: defined content as '{md5}a285a05c015ae278608f6454aef211ea'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/strip.rb]/ensure: defined content as '{md5}85d70ab95492e3e4ca5f0b5ec3f284a9'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/upcase.rb]/ensure: defined content as '{md5}086a7a470f738c4cb4cfc44591f1c00a'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/type/file_line.rb]/ensure: defined content as '{md5}7ce47aac33472d0aa8401622f6a4297c'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/time.rb]/ensure: defined content as '{md5}08d88d52abd1e230e3a2f82107545d48'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_bool.rb]/ensure: defined content as '{md5}e693b7c4b5366cff1380b6e0c7dd7b11'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_string.rb]/ensure: defined content as '{md5}cf6a20877a27b1073d63fdd522af50bb'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/reverse.rb]/ensure: defined content as '{md5}b234b54b8cd62b2d67ccd70489ffdccf'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/type.rb]/ensure: defined content as '{md5}62f914d6c90662aaae40c5539701be60'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/zip.rb]/ensure: defined content as '{md5}a89d5e802bc1e63e52020c2ddbaaca2c'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/ensure_resource.rb]/ensure: defined content as '{md5}6678127386e77bbc0f09db7b5a32ab6a'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_re.rb]/ensure: defined content as '{md5}c6664b3943bc820415a43f16372dc2a9'
+==> prep2: Notice: /File[/var/lib/puppet/lib/hiera/backend]/ensure: created
+==> prep2: Notice: /File[/var/lib/puppet/lib/hiera/backend/module_data_backend.rb]/ensure: defined content as '{md5}826360bc2fe629b4dd9f1b29cb96bbf2'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_function_available.rb]/ensure: defined content as '{md5}628428bbcd9313ce09783d9484330e09'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/str2saltedsha512.rb]/ensure: defined content as '{md5}49afad7b386be38ce53deaefef326e85'
+==> prep2: Notice: /File[/var/lib/puppet/lib/facter/gpgkeys.rb]/ensure: defined content as '{md5}f4ecc345d9ae9b2fd1191c3a54a15f49'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/delete_undef_values.rb]/ensure: defined content as '{md5}b32d4a3925753b2eb2c318cbd7f14404'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/fqdn_rotate.rb]/ensure: defined content as '{md5}37be809c17902c1ecf9bb2b20f0bfacd'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/values_at.rb]/ensure: defined content as '{md5}325a899e0201e8df5bd483fec6f12d76'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/getvar.rb]/ensure: defined content as '{md5}ab01ce68140bbdd84162a519a14ece3b'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/strftime.rb]/ensure: defined content as '{md5}e02e01a598ca5d7d6eee0ba22440304a'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/chop.rb]/ensure: defined content as '{md5}0ec76f54afd94201f35785dfeb2092b5'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/is_float.rb]/ensure: defined content as '{md5}10e0d3ecf75fac15e415aee79acf70dc'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/parsejson.rb]/ensure: defined content as '{md5}e7f968c34928107b84cd0860daf50ab1'
+==> prep2: Notice: /File[/var/lib/puppet/lib/puppet/parser/functions/validate_cmd.rb]/ensure: defined content as '{md5}37186a42533a9527ce0003239a233f8f'
+==> prep2: Info: Loading facts in /var/lib/puppet/lib/facter/root_home.rb
+==> prep2: Info: Loading facts in /var/lib/puppet/lib/facter/gpgkeys.rb
+==> prep2: Info: Loading facts in /var/lib/puppet/lib/facter/puppet_bug.rb
+==> prep2: Info: Loading facts in /var/lib/puppet/lib/facter/puppet_vardirtmp.rb
+==> prep2: Info: Loading facts in /var/lib/puppet/lib/facter/facter_dot_d.rb
+==> prep2: Info: Loading facts in /var/lib/puppet/lib/facter/puppet_vardir.rb
+==> prep2: Info: Loading facts in /var/lib/puppet/lib/facter/pe_version.rb
+==> prep2: Info: Caching catalog for prep2.example.com
+==> prep2: Warning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+==> prep2:    (at /usr/share/ruby/vendor_ruby/puppet/type.rb:816:in `set_default')
+==> prep2: Info: Applying configuration version '1415626970'
+==> prep2: Notice: /Stage[main]/Motd/File[/etc/motd]/content: 
+==> prep2: --- /etc/motd	2013-06-07 10:31:32.000000000 -0400
+==> prep2: +++ /tmp/puppet-file20141110-12334-1jjalzm	2014-11-10 08:42:53.786000000 -0500
+==> prep2: @@ -0,0 +1 @@
+==> prep2: +This is: Oh My Vagrant! (https://ttboj.wordpress.com/)
+==> prep2: Info: /Stage[main]/Motd/File[/etc/motd]: Filebucketed /etc/motd to puppet with sum d41d8cd98f00b204e9800998ecf8427e
+==> prep2: Notice: /Stage[main]/Motd/File[/etc/motd]/content: content changed '{md5}d41d8cd98f00b204e9800998ecf8427e' to '{md5}fecd3e9b71e25e2f4c7fce925a3ed39c'
+==> prep2: Notice: /Stage[main]/Puppet::Facter/Exec[/bin/mkdir -p '/etc/facter/facts.d/']/returns: executed successfully
+==> prep2: Notice: /File[/etc/facter/facts.d/]/seluser: seluser changed 'unconfined_u' to 'system_u'
+==> prep2: Notice: Welcome to the Puppet for Hackers course!
+==> prep2: Notice: /Stage[main]/P4h/Notify[welcome]/message: defined 'message' as 'Welcome to the Puppet for Hackers course!'
+==> prep2: Notice: /Stage[main]/P4h/File[/root/WELCOME]/ensure: defined content as '{md5}c158813fcbdb0ee9ab80ba3e3eda28a1'
+==> prep2: Notice: /Stage[main]/P4h::Prep2/File[/root/README]/ensure: defined content as '{md5}2f6c2489923bf28597f7aedca055e417'
+==> prep2: Notice: /Stage[main]/P4h::Prep2/User[mcfakey]/ensure: created
+==> prep2: Notice: /Stage[main]/P4h::Prep2/File[/home/mcfakey/joke]/ensure: created
+==> prep2: Notice: /Stage[main]/Puppet::Common/Package[augeas]/ensure: created
+==> prep2: Notice: /Stage[main]/Puppet::Params::Repo::Yum/Yum::Repos::Repo[puppetlabs]/File[/etc/yum.repos.d/puppetlabs.repo]/content: 
+==> prep2: --- /etc/yum.repos.d/puppetlabs.repo	2014-08-25 14:14:08.000000000 -0400
+==> prep2: +++ /tmp/puppet-file20141110-12334-1bvk6n2	2014-11-10 08:43:25.171000000 -0500
+==> prep2: @@ -1,42 +1,8 @@
+==> prep2: -[puppetlabs-products]
+==> prep2: -name=Puppet Labs Products El 7 - $basearch
+==> prep2: -baseurl=http://yum.puppetlabs.com/el/7/products/$basearch
+==> prep2: -gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> prep2: +[puppetlabs]
+==> prep2: +name=puppetlabs
+==> prep2: +baseurl=https://yum.puppetlabs.com/el/7.0.1406/products/x86_64/
+==> prep2:  enabled=1
+==> prep2:  gpgcheck=1
+==> prep2: +gpgkey=["https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs", "https://yum.puppetlabs.com/RPM-GPG-KEY-reductive"]
+==> prep2: +priority=99
+==> prep2:  
+==> prep2: -[puppetlabs-deps]
+==> prep2: -name=Puppet Labs Dependencies El 7 - $basearch
+==> prep2: -baseurl=http://yum.puppetlabs.com/el/7/dependencies/$basearch
+==> prep2: -gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> prep2: -enabled=1
+==> prep2: -gpgcheck=1
+==> prep2: -
+==> prep2: -[puppetlabs-devel]
+==> prep2: -name=Puppet Labs Devel El 7 - $basearch
+==> prep2: -baseurl=http://yum.puppetlabs.com/el/7/devel/$basearch
+==> prep2: -gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> prep2: -enabled=0
+==> prep2: -gpgcheck=1
+==> prep2: -
+==> prep2: -[puppetlabs-products-source]
+==> prep2: -name=Puppet Labs Products El 7 - $basearch - Source
+==> prep2: -baseurl=http://yum.puppetlabs.com/el/7/products/SRPMS
+==> prep2: -gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> prep2: -failovermethod=priority
+==> prep2: -enabled=0
+==> prep2: -gpgcheck=1
+==> prep2: -
+==> prep2: -[puppetlabs-deps-source]
+==> prep2: -name=Puppet Labs Source Dependencies El 7 - $basearch - Source
+==> prep2: -baseurl=http://yum.puppetlabs.com/el/7/dependencies/SRPMS
+==> prep2: -gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> prep2: -enabled=0
+==> prep2: -gpgcheck=1
+==> prep2: -
+==> prep2: -[puppetlabs-devel-source]
+==> prep2: -name=Puppet Labs Devel El 7 - $basearch - Source
+==> prep2: -baseurl=http://yum.puppetlabs.com/el/7/devel/SRPMS
+==> prep2: -gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+==> prep2: -enabled=0
+==> prep2: -gpgcheck=1
+==> prep2: Info: /Stage[main]/Puppet::Params::Repo::Yum/Yum::Repos::Repo[puppetlabs]/File[/etc/yum.repos.d/puppetlabs.repo]: Filebucketed /etc/yum.repos.d/puppetlabs.repo to puppet with sum 8f222887e27a1bccd60130d645b28e7b
+==> prep2: Notice: /Stage[main]/Puppet::Params::Repo::Yum/Yum::Repos::Repo[puppetlabs]/File[/etc/yum.repos.d/puppetlabs.repo]/content: content changed '{md5}8f222887e27a1bccd60130d645b28e7b' to '{md5}2a9870c89cda5794f87abcdfb69a31b1'
+==> prep2: Notice: /Stage[main]/Puppet::Params::Repo::Yum/Yum::Repos::Repo[puppetlabs-other]/File[/etc/yum.repos.d/puppetlabs-other.repo]/ensure: created
+==> prep2: Notice: /Stage[main]/Puppet::Common/File[/root/puppet/]/ensure: created
+==> prep2: Notice: /Stage[main]/Puppet::Client/File[/etc/puppet/puppet.conf]/content: 
+==> prep2: --- /etc/puppet/puppet.conf	2014-06-09 17:08:19.000000000 -0400
+==> prep2: +++ /tmp/puppet-file20141110-12334-pth31v	2014-11-10 08:43:25.279000000 -0500
+==> prep2: @@ -13,13 +13,19 @@
+==> prep2:  
+==> prep2:  [agent]
+==> prep2:      # The file in which puppetd stores a list of the classes
+==> prep2: -    # associated with the retrieved configuratiion.  Can be loaded in
+==> prep2: +    # associated with the retrieved configuration. Can be loaded in
+==> prep2:      # the separate ``puppet`` executable using the ``--loadclasses``
+==> prep2:      # option.
+==> prep2:      # The default value is '$confdir/classes.txt'.
+==> prep2:      classfile = $vardir/classes.txt
+==> prep2:  
+==> prep2: -    # Where puppetd caches the local configuration.  An
+==> prep2: +    # Where puppetd caches the local configuration. An
+==> prep2:      # extension indicating the cache format is added automatically.
+==> prep2:      # The default value is '$confdir/localconfig'.
+==> prep2:      localconfig = $vardir/localconfig
+==> prep2: +
+==> prep2: +    # Enable plugin sync.
+==> prep2: +    pluginsync = true
+==> prep2: +
+==> prep2: +
+==> prep2: +# vim:expandtab ts=4 sw=4 sta
+==> prep2: Info: /Stage[main]/Puppet::Client/File[/etc/puppet/puppet.conf]: Filebucketed /etc/puppet/puppet.conf to puppet with sum 58e2f9765e2994db8e8ab19a3513356e
+==> prep2: Notice: /Stage[main]/Puppet::Client/File[/etc/puppet/puppet.conf]/content: content changed '{md5}58e2f9765e2994db8e8ab19a3513356e' to '{md5}ca66a7a33f101ba8250e81b03a58421a'
+==> prep2: Info: /Stage[main]/Puppet::Client/File[/etc/puppet/puppet.conf]: Scheduling refresh of Service[puppet]
+==> prep2: Notice: /Stage[main]/Puppet::Common/File[/etc/puppet/auth.conf]/content: 
+==> prep2: --- /etc/puppet/auth.conf	2014-06-09 17:08:19.000000000 -0400
+==> prep2: +++ /tmp/puppet-file20141110-12334-80jbdz	2014-11-10 08:43:25.317000000 -0500
+==> prep2: @@ -110,10 +110,6 @@
+==> prep2:  method find, save
+==> prep2:  allow *
+==> prep2:  
+==> prep2: -path /v2.0/environments
+==> prep2: -method find
+==> prep2: -allow *
+==> prep2: -
+==> prep2:  # deny everything else; this ACL is not strictly necessary, but
+==> prep2:  # illustrates the default policy.
+==> prep2:  path /
+==> prep2: Info: /Stage[main]/Puppet::Common/File[/etc/puppet/auth.conf]: Filebucketed /etc/puppet/auth.conf to puppet with sum e4532096124185064846a7d2d25e98ee
+==> prep2: Notice: /Stage[main]/Puppet::Common/File[/etc/puppet/auth.conf]/content: content changed '{md5}e4532096124185064846a7d2d25e98ee' to '{md5}1891233908ecf2dd0fff8a73a3a97097'
+==> prep2: Info: /Stage[main]/Puppet::Common/File[/etc/puppet/auth.conf]: Scheduling refresh of Service[puppet]
+==> prep2: Notice: /Stage[main]/Puppet::Common/Service[puppet]: Triggered 'refresh' from 2 events
+==> prep2: Notice: /Stage[main]/Puppet::Vardir/File[/var/lib/puppet/tmp/]/ensure: created
+==> prep2: Notice: Finished catalog run in 31.68 seconds

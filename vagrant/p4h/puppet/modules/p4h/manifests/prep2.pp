@@ -33,7 +33,14 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
-
+	user { "mcfakey":
+	  ensure     => "present",
+	  managehome => true,
+	} ->
+        file {'/home/mcfakey/joke':
+           ensure => present,
+           content => 'knock knock; whos there?'
+        }
 }
 
 # vim: ts=8
