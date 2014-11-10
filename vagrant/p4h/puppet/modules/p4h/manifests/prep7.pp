@@ -43,6 +43,8 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+	planfile {'hihiihihi': }
+	navigation {'navava': }
 
 }
 
